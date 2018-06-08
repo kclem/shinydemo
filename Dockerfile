@@ -6,11 +6,11 @@ RUN apt-get update && apt-get install -y libssl-dev libcurl4-openssl-dev
 COPY . /srv/shiny-server/.
 
 RUN Rscript -e "install.packages( \
-    c('httr', 'plotly', 'RColorBrewer'))"
+    c('httr', 'plotly', 'RColorBrewer'),quiet = TRUE)"
 
 
 COPY shiny-server.conf  /etc/shiny-server/shiny-server.conf
-COPY /myapp /srv/shiny-server/
+COPY /app /srv/shiny-server/
 
 
 EXPOSE 3838
