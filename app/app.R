@@ -127,7 +127,7 @@ ui <- fluidPage(
   fluidRow(
     fluidRow(
       column(12,align="center",
-         h3("Probably of observing an editing event")
+         h3("Probability of observing an editing event")
       )
     ),
     fluidRow(
